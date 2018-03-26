@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title></title>
+
+	<!-- inject:css -->
+	<!-- <link href="package/bundlecss1.0.0.css" rel="stylesheet"> -->
+	<!-- endinject -->
+	<!-- <script is='wc-language-script'></script> -->
+</head>
+
+<body>
+
+	<wc-translate t-thing="hello">string.template</wc-translate>
+	<!-- <wc-language-toggle></wc-language-toggle> -->
+
+	<!--TODO: your components need to be included here if you want to test them.-->
+
+	<!-- inject:js -->
+	<script src="lib/wc-118n.js"></script>
+	<!-- Prod: <script src="package/bundlejs1.0.0.js"></script> -->
+	<!-- endinject -->
+	<script>
+		wc.I18n.setLang('empty_LANG');
+		wc.I18n.debug = true;
+		wc.I18n.addStrings('en_US', {
+			'string.template': 'this is a template for ${thing}.'
+		});
+		wc.I18n.addStrings('en_CA', {
+			'string.template': 'sorry, but this is a template for ${thing} don\'t ya know eh?'
+		});
+		wc.I18n.addStrings('fr_CA', {
+			'string.template': 'hon hon hon! la templatique du ${thing} mon ami!'
+		});
+		wc.I18n.addStrings('empty_LANG', {
+			'string.template': ''
+		});
+		wc.I18n.addStrings('lol_CAT', {
+			'string.template': '${thing} haz dis templat'
+		});
+	</script>
+
+</body>
+
+</html>
